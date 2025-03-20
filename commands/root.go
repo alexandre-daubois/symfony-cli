@@ -52,6 +52,7 @@ func CommonCommands() []*console.Command {
 	localCommands := []*console.Command{
 		binConsoleWrapper,
 		composerWrapper,
+		pieWrapper,
 		phpWrapper,
 		bookCheckReqsCmd,
 		bookCheckoutCmd,
@@ -143,6 +144,7 @@ func WelcomeAction(c *console.Context) error {
 		localServerStopCmd,
 		localSecurityCheckCmd,
 		composerWrapper,
+		pieWrapper,
 		binConsoleWrapper,
 		phpWrapper,
 	})

@@ -25,17 +25,17 @@ import (
 	. "gopkg.in/check.v1"
 )
 
-type ComposerSuite struct{}
+type AssertSuite struct{}
 
-var _ = Suite(&ComposerSuite{})
+var _ = Suite(&AssertSuite{})
 
-func (s *ComposerSuite) TestIsComposerPHPScript(c *C) {
+func (s *AssertSuite) TestAssertIsPHPScript(c *C) {
 	dir, err := filepath.Abs("testdata/php_scripts")
 	c.Assert(err, IsNil)
 
-	c.Assert(isPHPScript(""), Equals, false)
-	c.Assert(isPHPScript(filepath.Join(dir, "unknown")), Equals, false)
-	c.Assert(isPHPScript(filepath.Join(dir, "invalid")), Equals, false)
+	c.Assert(assertIsPHPScript(""), Equals, false)
+	c.Assert(assertIsPHPScript(filepath.Join(dir, "unknown")), Equals, false)
+	c.Assert(assertIsPHPScript(filepath.Join(dir, "invalid")), Equals, false)
 
 	for _, validScripts := range []string{
 		"usual-one",
@@ -43,6 +43,6 @@ func (s *ComposerSuite) TestIsComposerPHPScript(c *C) {
 		"custom-one",
 		"plain-one.php",
 	} {
-		c.Assert(isPHPScript(filepath.Join(dir, validScripts)), Equals, true)
+		c.Assert(assertIsPHPScript(filepath.Join(dir, validScripts)), Equals, true)
 	}
 }
