@@ -161,7 +161,7 @@ var availableServices = []*service{
 		Type: "gotenberg",
 		Versions: serviceVersions{
 			Deprecated: []string{},
-			Supported:  []string{"8.25"},
+			Supported:  []string{"8"},
 		},
 	},
 	{
@@ -196,7 +196,7 @@ var availableServices = []*service{
 		Type: "mercure",
 		Versions: serviceVersions{
 			Deprecated: []string{},
-			Supported:  []string{"0.21"},
+			Supported:  []string{"0"},
 		},
 	},
 	{
