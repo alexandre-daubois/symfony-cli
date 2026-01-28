@@ -2964,6 +2964,7 @@ var Commands = []*console.Command{
 		},
 		Usage: "Create a variable",
 		Flags: []console.Flag{
+			&console.StringFlag{Name: "app-scope"},
 			&console.BoolFlag{Name: "enabled", DefaultValue: true},
 			&console.StringFlag{Name: "environment", Aliases: []string{"e"}},
 			&console.BoolFlag{Name: "inheritable", DefaultValue: true},
@@ -3052,6 +3053,7 @@ var Commands = []*console.Command{
 		Usage: "Update a variable",
 		Flags: []console.Flag{
 			&console.BoolFlag{Name: "allow-no-change"},
+			&console.StringFlag{Name: "app-scope"},
 			&console.BoolFlag{Name: "enabled", DefaultValue: true},
 			&console.StringFlag{Name: "environment", Aliases: []string{"e"}},
 			&console.BoolFlag{Name: "inheritable", DefaultValue: true},
